@@ -31,6 +31,7 @@ def main():
     # Data
     print(colored('Get dataset and dataloaders', 'blue'))
     train_transformations = get_train_transformations(p)
+    print(train_transformations.shape)
     val_transformations = get_val_transformations(p)
     train_dataset = get_train_dataset(p, train_transformations, 
                                         split='train', to_neighbors_dataset = True)
